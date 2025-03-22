@@ -11,7 +11,7 @@ function App() {
         <boxGeometry/>
         <meshBasicMaterial/>
       </mesh>
-      <Soilder position={[1.5,0,0]} animation_Type={"Idle"}/>
+      <Soilder position={[1.5,0,0]}/>
       <OrbitControls dampingFactor={1.5} />
     </Canvas>
   )
