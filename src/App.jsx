@@ -1,6 +1,7 @@
 import {Canvas} from "@react-three/fiber"
 import './App.css'
 import {OrbitControls} from "@react-three/drei"
+import Soilder from "./Soilder.jsx"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <boxGeometry/>
         <meshBasicMaterial/>
       </mesh>
+      <Soilder position={[1.5,0,0]} animation_Type={"Idle"}/>
       <OrbitControls dampingFactor={1.5} />
     </Canvas>
   )
