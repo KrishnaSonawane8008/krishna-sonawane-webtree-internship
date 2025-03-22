@@ -22,8 +22,8 @@ function App() {
         <boxGeometry/>
         <meshStandardMaterial/>
       </mesh>
-      {/* <Soilder position={[1.5,0,0]}/> */}
-      <Model/>
+      <Soilder position={[1.5,0,0]}/>
+      {/* <Model/> */}
       <OrbitControls dampingFactor={1.5} />
     </Canvas>
   )

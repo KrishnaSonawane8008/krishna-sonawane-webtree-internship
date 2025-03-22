@@ -5,7 +5,7 @@ import { SkeletonUtils } from 'three-stdlib'
 
 export default function Soilder(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('src/assets/SoilderAssets/Soilder.gltf')
+  const { scene, animations } = useGLTF('/SoilderAssets/Soilder.gltf')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
