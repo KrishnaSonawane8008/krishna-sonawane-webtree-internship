@@ -13,9 +13,9 @@ function App() {
 
       <directionalLight position={ [1,2,-2] }  castShadow/>
       <ambientLight/>
-      <Soilder position={[1.5,0,0]} animation_Type={"Idle"}/>
-      <Soilder position={[0,0,0]} animation_Type={"Walk"}/>
-      <Soilder position={[-1.5,0,0]} animation_Type={"Run"}/>
+      <Soilder position={[1.5,0,0]} animation_Type={0}/>
+      <Soilder position={[0,0,0]} animation_Type={1}/>
+      <Soilder position={[-1.5,0,0]} animation_Type={2}/>
 
       <mesh position={[0,-0.05,0.0]} receiveShadow>
         <boxGeometry args={[10,0.1,10]}/>

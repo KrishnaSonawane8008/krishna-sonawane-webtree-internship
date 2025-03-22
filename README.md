@@ -1,9 +1,9 @@
 The boilerplate for model importing is generated using the command: npx gltfjsx src/assets/SoilderAssets/Soilder.gltf 
 <br>
-Playing Animation is handeled in the useEffect hook with a simple switch-case
+Playing Animation is handeled in the useEffect hook with an array which stores the action objects.
 <br>
 You can see so, below:
-<img src="/Code_Screenshots/Screenshot(88).png">
+<img src="./public/CodeSnippets/Screenshot(91).png">
 <br>
 <br>
 <h4>Final OutPut:</h4>

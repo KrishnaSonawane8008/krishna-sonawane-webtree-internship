@@ -13,20 +13,22 @@ export default function Soilder(props) {
   useEffect(()=>{
     // console.log(actions)
     let anim_type=props.animation_Type
-    switch(anim_type){
-      case "Idle":
-        actions.Idle.play();
-        break;
-      case "Run":
-        actions.Run.play();
-        break;
-      case "Walk":
-        actions.Walk.play();
-        break;
-      default:
-        actions.TPose.play();
+    let anims=[actions.Idle, actions.Run, actions.Walk]
+    anims[props.animation_Type].play()
+    // switch(anim_type){
+    //   case "Idle":
+    //     actions.Idle.play();
+    //     break;
+    //   case "Run":
+    //     actions.Run.play();
+    //     break;
+    //   case "Walk":
+    //     actions.Walk.play();
+    //     break;
+    //   default:
+    //     actions.TPose.play();
         
-    }
+    // }
   },[])
 
   return (
