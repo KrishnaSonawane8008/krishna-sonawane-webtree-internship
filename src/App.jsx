@@ -1,30 +1,28 @@
-import {Canvas, useLoader} from "@react-three/fiber"
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js'
+import {Canvas} from "@react-three/fiber"
 import './App.css'
 import {OrbitControls} from "@react-three/drei"
 import Soilder from "./Soilder.jsx"
 
-function Model(){
-  const result=useLoader(GLTFLoader, '/SoilderAssets/Soilder.gltf')
-  return(
-    <primitive object={result.scene} />
-  )
-}
+
 
 
 function App() {
 
   return (
-    <Canvas>
+    <Canvas shadows camera={ {position: [3,3,-3]} } >
+
       <directionalLight position={ [1,2,-2] }  castShadow/>
       <ambientLight/>
-      <mesh>
-        <boxGeometry/>
-        <meshStandardMaterial/>
+      <Soilder position={[1.5,0,0]} animation_Type={"Idle"}/>
+      <Soilder position={[0,0,0]} animation_Type={"Walk"}/>
+      <Soilder position={[-1.5,0,0]} animation_Type={"Run"}/>
+
+      <mesh position={[0,-0.05,0.0]} receiveShadow>
+        <boxGeometry args={[10,0.1,10]}/>
+        <meshStandardMaterial color={"white"}/>
       </mesh>
-      <Soilder position={[1.5,0,0]}/>
-      {/* <Model/> */}
       <OrbitControls dampingFactor={1.5} />
+
     </Canvas>
   )
 }
