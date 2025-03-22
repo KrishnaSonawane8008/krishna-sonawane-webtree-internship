@@ -11,9 +11,9 @@ function App() {
       <ambientLight/>
       <mesh>
         <boxGeometry/>
-        <meshBasicMaterial/>
+        <meshStandardMaterial/>
       </mesh>
-      <Soilder position={[1.5,0,0]}/>
+      {/* <Soilder position={[1.5,0,0]}/> */}
       <OrbitControls dampingFactor={1.5} />
     </Canvas>
   )
