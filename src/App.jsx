@@ -7,6 +7,8 @@ function App() {
 
   return (
     <Canvas>
+      <directionalLight position={ [1,2,-2] }  castShadow/>
+      <ambientLight/>
       <mesh>
         <boxGeometry/>
         <meshBasicMaterial/>
