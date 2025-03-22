@@ -5,7 +5,7 @@ import {OrbitControls} from "@react-three/drei"
 import Soilder from "./Soilder.jsx"
 
 function Model(){
-  const result=useLoader(GLTFLoader, 'src/assets/SoilderAssets/Soilder.gltf')
+  const result=useLoader(GLTFLoader, '/SoilderAssets/Soilder.gltf')
   return(
     <primitive object={result.scene} />
   )
