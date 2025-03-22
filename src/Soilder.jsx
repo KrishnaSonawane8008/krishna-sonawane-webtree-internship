@@ -10,24 +10,24 @@ export default function Soilder(props) {
   const { nodes, materials } = useGraph(clone)
   const { actions } = useAnimations(animations, group)
   
-  useEffect(()=>{
-    // console.log(actions)
-    let anim_type=props.animation_Type
-    switch(anim_type){
-      case "Idle":
-        actions.Idle.play();
-        break;
-      case "Run":
-        actions.Run.play();
-        break;
-      case "Walk":
-        actions.Walk.play();
-        break;
-      default:
-        actions.TPose.play();
+//   useEffect(()=>{
+//     // console.log(actions)
+//     let anim_type=props.animation_Type
+//     switch(anim_type){
+//       case "Idle":
+//         actions.Idle.play();
+//         break;
+//       case "Run":
+//         actions.Run.play();
+//         break;
+//       case "Walk":
+//         actions.Walk.play();
+//         break;
+//       default:
+//         actions.TPose.play();
         
-    }
-  },[])
+//     }
+//   },[])
 
   return (
         <group ref={group} position={props.position} dispose={null} name="Character" rotation={[-Math.PI / 2, 0, 0]} scale={0.01}>
