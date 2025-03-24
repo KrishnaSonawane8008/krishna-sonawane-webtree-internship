@@ -11,8 +11,10 @@ export default function Soilder(props) {
   const { actions } = useAnimations(animations, group)
   
   useEffect(()=>{
-    let anims=[actions.Idle, actions.Run, actions.Walk]
-    anims[props.animation_Type].play()
+    
+    // let anims=[actions.Idle, actions.Run, actions.Walk]
+    actions[props.animation_Type].play()
+    
   },[])
 
   return (
