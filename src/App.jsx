@@ -59,11 +59,11 @@ function App() {
           atk.setLoop(LoopOnce, 0)
 
           defenceTimeout.current=setTimeout( ()=>{
-            def.play()
+            def.fadeIn(0.3).play()
           }, def_delay )
 
           attackTimeout.current=setTimeout( ()=>{
-            atk.play()
+            atk.fadeIn(0.3).play()
           }, atk_delay )
           
 
